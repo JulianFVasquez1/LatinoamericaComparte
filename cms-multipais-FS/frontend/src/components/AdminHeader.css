@@ -1,0 +1,121 @@
+/* =========================================
+   ADMIN HEADER — TopBar superior
+========================================= */
+
+.admin-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 60px;
+  background: var(--admin-header-bg, #ffffff);
+  border-bottom: 1px solid var(--admin-header-border, rgba(0, 0, 0, 0.08));
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+.admin-header__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--admin-header-text, #1e293b);
+  letter-spacing: 0.01em;
+}
+
+.admin-header__right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-header__user {
+  align-items: center;
+  color: var(--admin-header-text, #1e293b);
+}
+
+.admin-header__role {
+  font-size: 0.68rem;
+  opacity: 0.55;
+  text-transform: capitalize;
+}
+
+.admin-header__divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Botón toggle de tema */
+.admin-header__theme-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--admin-header-text, #1e293b);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  font-size: 1rem;
+}
+
+.admin-header__theme-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Botón de logout */
+.admin-header__logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid rgba(220, 53, 69, 0.35);
+  background: transparent;
+  color: #dc3545;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-header__logout-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+  border-color: #dc3545;
+}
+
+/* ── Adaptación al Dark Mode (Bootstrap data-bs-theme) ── */
+[data-bs-theme="dark"] .admin-header {
+  --admin-header-bg: #1e293b;
+  --admin-header-border: rgba(255, 255, 255, 0.06);
+  --admin-header-text: #f1f5f9;
+  background: #1e293b;
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-bs-theme="dark"] .admin-header__divider {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .admin-header__theme-btn {
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-bs-theme="dark"] .admin-header__theme-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .admin-header__logout-btn {
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.35);
+}
+
+[data-bs-theme="dark"] .admin-header__logout-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}

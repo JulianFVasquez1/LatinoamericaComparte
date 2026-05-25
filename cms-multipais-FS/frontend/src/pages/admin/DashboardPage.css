@@ -1,0 +1,56 @@
+/* src/pages/admin/DashboardPage.css */
+
+.bg-slate-custom {
+  background-color: #1e293b !important;
+}
+
+.text-slate-custom {
+  color: #1e293b !important;
+}
+
+/* Evitar que el ícono se encoja en pantallas pequeñas */
+.icon-box {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+/* Suavizar la transición en hover para darle un toque Enterprise */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* =========================================
+   SOPORTE PARA MODO OSCURO (DARK MODE)
+========================================= */
+
+[data-bs-theme="dark"] body {
+  /* Fondo más profundo en modo oscuro para contraste */
+  background-color: #0f172a !important; 
+}
+
+[data-bs-theme="dark"] .bg-slate-custom {
+  background-color: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-bs-theme="dark"] .text-slate-custom {
+  /* En modo oscuro, el texto Slate cambia a claro para ser legible */
+  color: #f8f9fa !important; 
+}
+
+[data-bs-theme="dark"] .icon-box.bg-white {
+  /* Ajuste de cajas de íconos blancos en modo oscuro */
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .logo-container.bg-white {
+  background-color: #1e293b !important;
+  border: 1px solid rgba(255,255,255, 0.1);
+}
